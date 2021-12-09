@@ -76,18 +76,4 @@ public class TranslateResponse {
     public TranslateResponse() {
        // Default constructor.
     }
-    
-    
-    /**
-     * Instantiates a new translate response.
-     *
-     * @param name the name
-     * @param amount the amount
-     * @param amountInWords the amount in words
-     */
-    public TranslateResponse(String name, long amount, String amountInWords) {
-       this.name = name;
-       this.amount = amount;
-       this.amountInWords = amountInWords;
-    }
 }

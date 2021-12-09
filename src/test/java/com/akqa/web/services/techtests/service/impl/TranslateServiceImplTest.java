@@ -61,6 +61,8 @@ public class TranslateServiceImplTest {
         // Then
         Assert.assertEquals(" one", translateService.getTranslatedAmountToWords(1));
         Assert.assertEquals(" ten", translateService.getTranslatedAmountToWords(10));
+        Assert.assertEquals(" eleven", translateService.getTranslatedAmountToWords(11));
+        Assert.assertEquals(" forty five", translateService.getTranslatedAmountToWords(45));
         Assert.assertEquals(" one hundred", translateService.getTranslatedAmountToWords(100));
         Assert.assertEquals(" one thousand", translateService.getTranslatedAmountToWords(1000));
         Assert.assertEquals(" one hundred thousand", translateService.getTranslatedAmountToWords(100000));
@@ -91,6 +93,19 @@ public class TranslateServiceImplTest {
         Assert.assertEquals("Ajay", response.getName());
         Assert.assertEquals(0, response.getAmount());
         Assert.assertEquals("zero", response.getAmountInWords());
+    }
+    
+    /**
+     * Testperform translation when name and amount provided is negative captitalize name and amount.
+     */
+    @Test
+    public void testperformTranslationWhenNameAndAmountProvidedIsNegativeCaptitalizeNameAndAmount() {
+        // When
+        TranslateResponse response = translateService.performTranslation("ajay", -89);
+        // Then
+        Assert.assertEquals("Ajay", response.getName());
+        Assert.assertEquals(0, response.getAmount());
+        Assert.assertEquals(null, response.getAmountInWords());
     }
     
     /**
