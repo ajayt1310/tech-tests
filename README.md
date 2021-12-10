@@ -26,7 +26,7 @@ mvn spring-boot:run
 ## What is the use of this Repo
 
 This Project is a Translate Engine Rest API Project which demonstrates the following
-1. Host a REST API end point at root.
+1. Host a REST API end point (/translate)
 2. Making HTTP Get calls
 3. This Api takes two fields Name and Amount (in digits). User has to enter name and amount and has to submit the information to backend springboot application API which takes both the fields as inputs and gives output in JSON having Name translated in capital case, entered amount (in digits) and enterted amount in words in JSON. 
 
